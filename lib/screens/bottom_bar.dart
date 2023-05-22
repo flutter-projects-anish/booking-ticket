@@ -10,7 +10,7 @@ class BottomBar extends StatefulWidget {
 }
 
 class BottomBarState extends State<BottomBar> {
-  int _selectedIndex = 3;
+  int _selectedIndex = 0;
 
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeScreen(),
@@ -20,10 +20,9 @@ class BottomBarState extends State<BottomBar> {
   ];
 
   void _onItemTapped(int index) {
-      setState(() {
-        _selectedIndex = index;
-
-      });
+    setState(() {
+      _selectedIndex = index;
+    });
   }
 
   @override
@@ -33,7 +32,7 @@ class BottomBarState extends State<BottomBar> {
         title: const Center(
           child: Text(
             "Booking Tickets",
-            style: TextStyle(color: Colors.black, fontWeight:FontWeight.bold),
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
         ),
       ),
@@ -41,7 +40,7 @@ class BottomBarState extends State<BottomBar> {
         child: _widgetOptions[_selectedIndex],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
+          currentIndex: _selectedIndex,
           onTap: _onItemTapped,
           elevation: 10,
           showSelectedLabels: false,
