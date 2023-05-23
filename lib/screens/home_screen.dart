@@ -45,13 +45,40 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   const Gap(25),
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: const Color(0XFFF4F6FD)),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 12, vertical: 12),
+                    child: Row(
+                      children: [
+                        const Icon(FluentSystemIcons.ic_fluent_search_regular,
+                            color: Color(0XFFBFC205)),
+                        Text(
+                          "Search",
+                          style: Styles.headLineStyle4,
+                        )
+                      ],
+                    ),
+                  ),
+                  const Gap(20),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Icon(FluentSystemIcons.ic_fluent_search_regular,
-                          color: Color(0XFFBFC205)),
                       Text(
-                        "Search",
-                        style: Styles.headLineStyle4,
+                        'Upcoming flights',
+                        style: Styles.headLineStyle2,
+                      ),
+                      InkWell(
+                        onTap: () {
+                          print("inkwell in use");
+                        },
+                        child: Text(
+                          'View All',
+                          style: Styles.textStyle
+                              .copyWith(color: Styles.primaryColor),
+                        ),
                       )
                     ],
                   ),
