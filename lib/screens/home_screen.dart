@@ -1,4 +1,7 @@
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/utils/app_styles.dart';
+import 'package:gap/gap.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -6,26 +9,31 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0XFFeeedf2),
+        backgroundColor: Styles.bgColor,
         body: ListView(
           children: [
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: [
+                  const Gap(40),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Good Morning"),
-                          Text("Good Morning"),
+                          Text("Good Morning", style: Styles.headLineStyle3),
+                          const Gap(5),
+                          Text(
+                            "Book Tickets",
+                            style: Styles.headLineStyle,
+                          ),
                         ],
                       ),
                       Container(
-                        height: 30.0,
-                        width: 30.0,
+                        height: 50.0,
+                        width: 50.0,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: const DecorationImage(
@@ -35,7 +43,18 @@ class HomeScreen extends StatelessWidget {
                         ),
                       )
                     ],
-                  )
+                  ),
+                  const Gap(25),
+                  Row(
+                    children: [
+                      const Icon(FluentSystemIcons.ic_fluent_search_regular,
+                          color: Color(0XFFBFC205)),
+                      Text(
+                        "Search",
+                        style: Styles.headLineStyle4,
+                      )
+                    ],
+                  ),
                 ],
               ),
             )

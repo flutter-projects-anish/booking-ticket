@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/utils/app_styles.dart';
 import 'screens/bottom_bar.dart';
 
 void main() {
@@ -12,9 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "booking ticektes",
       theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
+        primaryColor: primary,
       ),
       home: const BottomBar(),
     );
