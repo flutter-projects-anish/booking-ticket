@@ -1,5 +1,6 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/ticket_view.dart';
 import 'package:flutter_application_1/utils/app_styles.dart';
 import 'package:gap/gap.dart';
 
@@ -71,9 +72,7 @@ class HomeScreen extends StatelessWidget {
                         style: Styles.headLineStyle2,
                       ),
                       InkWell(
-                        onTap: () {
-                          print("inkwell in use");
-                        },
+                        onTap: () {},
                         child: Text(
                           'View All',
                           style: Styles.textStyle
@@ -84,7 +83,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
+            const Gap(15),
+            const TicketView(),
           ],
         ));
   }
