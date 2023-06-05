@@ -232,7 +232,7 @@ class TicketView extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         Text(
-                          '${ticket['number']}',
+                          '${ticket['number']}.toString()',
                           style: Styles.headLineStyle3
                               .copyWith(color: Colors.white),
                         ),
